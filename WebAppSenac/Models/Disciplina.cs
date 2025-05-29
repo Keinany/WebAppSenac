@@ -4,6 +4,7 @@ namespace WebAppSenac.Models
 {
     public class Disciplina
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         [StringLength(100)]
