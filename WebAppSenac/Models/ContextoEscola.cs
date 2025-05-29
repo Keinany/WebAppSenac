@@ -9,14 +9,14 @@ namespace WebAppSenac.Models
         { 
         }
         public DbSet<Aluno> Alunos { get; set; }
-        public DbSet<Professor> Professor { get; set; }
-        public DbSet<Disciplina> Disciplina { get; set; }
+        public DbSet<Professor> Professores { get; set; }
+        public DbSet<Disciplina> Disciplinas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Aluno>().ToTable("Alunos");
-            modelBuilder.Entity<Aluno>().ToTable("Professores");
-            modelBuilder.Entity<Aluno>().ToTable("Disciplina");
+            modelBuilder.Entity<Professor>().ToTable("Professores");
+            modelBuilder.Entity<Disciplina>().ToTable("Disciplinas");
 
         }
     }
