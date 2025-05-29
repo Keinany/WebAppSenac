@@ -9,10 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //Configurar a conexaõ com o banco de dados 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnetion");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 //Registrar o contexto do banco de dados
-IServiceCollection sericeCollection =builder.Services.AddDbContext<ContextoEscola>(options =>options.UseSqlServer(connectionString));
+IServiceCollection serviceCollection =builder.Services.AddDbContext<ContextoEscola>(options =>options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 

@@ -11,7 +11,7 @@ using WebAppSenac.Models;
 namespace WebAppSenac.Migrations
 {
     [DbContext(typeof(ContextoEscola))]
-    [Migration("20250529201647_inicial")]
+    [Migration("20250529213150_inicial")]
     partial class inicial
     {
         /// <inheritdoc />
