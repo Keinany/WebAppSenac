@@ -1,10 +1,10 @@
-﻿@model IEnumerable<WebAppSenac.Models.Aluno>
+﻿@model IEnumerable<WebAppSenac.Models.Professor>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Aluno</h1>
+<h1>Professor</h1>
 
 <p>
     <a asp-action="Create">Cadastrar</a>
@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                @Html.DisplayNameFor(model => model.Disciplina)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
@@ -34,7 +34,7 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
+                @Html.DisplayFor(modelItem => item.Disciplina)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
@@ -43,8 +43,8 @@
                 @Html.DisplayFor(modelItem => item.Telefone)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

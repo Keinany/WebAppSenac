@@ -1,0 +1,38 @@
+﻿@model WebAppSenac.Models.Disciplina
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastrar Disciplina</h1>
+
+<h4>Disciplina</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeDisciplina" class="control-label">Nome da disciplina</label>
+                <input asp-for="NomeDisciplina" class="form-control" />
+                <span asp-validation-for="NomeDisciplina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CargaHoraria" class="control-label">Carga Horária</label>
+                <input asp-for="CargaHoraria" class="form-control" />
+                <span asp-validation-for="CargaHoraria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
